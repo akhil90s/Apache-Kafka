@@ -29,4 +29,10 @@ kafka-configs.bat --bootstrap-server localhost:9092 --alter --topic test-topic -
   With Key
   <br/> kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
   
+- How to instantiate a Console Consumer?  
   
+  Without Key
+   <br/> kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning
+  
+  With Key
+   <br/> kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning -property "key.separator= - " --property "print.key=true"
