@@ -22,11 +22,11 @@ kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic <topic-nam
 kafka-configs.bat --bootstrap-server localhost:9092 --alter --topic test-topic --partitions 40
   
 - How to instantiate a Console Producer?
+ 
+  Without Key 
+  <br/>  kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic
 
-Without Key 
-<br/>  kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic
-
-With Key
-<br/> kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
+  With Key
+  <br/> kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
   
   
