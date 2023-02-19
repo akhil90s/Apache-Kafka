@@ -9,10 +9,10 @@
 - Topic Creation
 <br/> kafka-topics.bat --create --topic test-topic -zookeeper localhost:2181 --replication-factor 1 --partitions 4
 
-- List all topics
+- List all Topics
 <br/> kafka-topics.bat --bootstrap-server localhost:9092 --list
 
--Describe 
+- Describe a Topic 
 <br/> kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic <topic-name>
   
 - Alter the partitions of a topic
