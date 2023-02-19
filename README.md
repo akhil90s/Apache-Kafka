@@ -8,7 +8,7 @@ zookeeper-server-start.bat ..\..\config\zookeeper.properties
 
 kafka-server-start.bat ..\..\config\server.properties
 
-- How to create a topic ?
+- Topic Creation
 
 kafka-topics.bat --create --topic test-topic -zookeeper localhost:2181 --replication-factor 1 --partitions 4
 
@@ -21,7 +21,7 @@ kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic <topic-nam
   
 kafka-configs.bat --bootstrap-server localhost:9092 --alter --topic test-topic --partitions 40
   
-- How to instantiate a Console Producer?
+- Instantiate a Console Producer
  
   Without Key 
   <br/>  kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic
@@ -29,7 +29,7 @@ kafka-configs.bat --bootstrap-server localhost:9092 --alter --topic test-topic -
   With Key
   <br/> kafka-console-producer.bat --broker-list localhost:9092 --topic test-topic --property "key.separator=-" --property "parse.key=true"
   
-- How to instantiate a Console Consumer?  
+- Instantiate a Console Consumer 
   
   Without Key
    <br/> kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning
