@@ -39,6 +39,9 @@
   
 - View Consumer Groups
 <br/> kafka-consumer-groups.bat --bootstrap-server localhost:9092 --list
- 
   
+- Viewing the Commit Log
+<br/> kafka-run-class.bat kafka.tools.DumpLogSegments --deep-iteration --files /tmp/kafka-logs/test-topic-0/00000000000000000000.log
+ 
+
   
