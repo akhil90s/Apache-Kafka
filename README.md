@@ -33,3 +33,12 @@
   
   With Key
    <br/> kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --from-beginning -property "key.separator= - " --property "print.key=true"
+  
+  With Consumer Group
+  <br/> kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-topic --group <group-name>
+  
+- View Consumer Groups
+<br/> kafka-consumer-groups.bat --bootstrap-server localhost:9092 --list
+ 
+  
+  
