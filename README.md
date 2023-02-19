@@ -1,25 +1,22 @@
 # Apache-Kafka
 
 - Start up the Zookeeper
-
-zookeeper-server-start.bat ..\..\config\zookeeper.properties
+<br/> zookeeper-server-start.bat ..\..\config\zookeeper.properties
 
 - Start up the Kafka Broker.
-
-kafka-server-start.bat ..\..\config\server.properties
+<br/> kafka-server-start.bat ..\..\config\server.properties
 
 - Topic Creation
-
-kafka-topics.bat --create --topic test-topic -zookeeper localhost:2181 --replication-factor 1 --partitions 4
+<br/> kafka-topics.bat --create --topic test-topic -zookeeper localhost:2181 --replication-factor 1 --partitions 4
 
 - List all topics
+<br/> kafka-topics.bat --bootstrap-server localhost:9092 --list
 
-kafka-topics.bat --bootstrap-server localhost:9092 --list
-kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic <topic-name>
+-Describe 
+<br/> kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic <topic-name>
   
 - Alter the partitions of a topic
-  
-kafka-configs.bat --bootstrap-server localhost:9092 --alter --topic test-topic --partitions 40
+ <br/>kafka-configs.bat --bootstrap-server localhost:9092 --alter --topic test-topic --partitions 40
   
 - Instantiate a Console Producer
  
